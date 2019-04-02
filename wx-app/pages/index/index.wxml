@@ -1,0 +1,57 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="header border fixed">
+    <view class="header-logo-box">
+      <image src="/images/logo.png" class="header-logo border"></image>
+    </view>
+    <view class="header-search-box border relative" bindtap='skip'>
+      <icon type="search" size="20" class='absolute header-search-icon'/>
+      <input type="text" class="header-search border" disabled='disabled' placeholder='搜索商品名称'/>
+    </view>
+    <view class="header-person-box relative">
+      <image src="/images/person.png" class="header-person border absolute"></image>
+    </view>
+  </view>
+  <scroll-view class="header-scroll fixed" scroll-x="true">
+    <view class="scroll-item">推荐</view>
+    <view class="scroll-item">手机</view>
+    <view class="scroll-item">智能</view>
+    <view class="scroll-item">电视</view>
+    <view class="scroll-item">家电</view>
+    <view class="scroll-item">笔记本</view>
+  </scroll-view>
+  <swiper class="header-swiper" indicator-dots="true" indicator-active-color="#ff6700" autoplay="true" circular="true">
+    <swiper-item>
+      <image src="/images/img1.webp.jpg"></image>
+    </swiper-item>
+     <swiper-item>
+    <image src="/images/img2.webp.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/img3.webp.jpg"></image>
+    </swiper-item>
+    </swiper>
+    <view class="category">
+      <view>
+        <image src="/images/new.webp.jpg"></image>
+      </view>
+      <view>
+        <image src="/images/old.webp.jpg"></image>
+      </view>
+      <view>
+        <image src="/images/tv.webp.jpg"></image>
+      </view>
+      <view>
+        <image src="/images/day.webp.jpg"></image>
+      </view>
+      <view>
+        <image src="/images/miui.webp.jpg"></image>
+      </view>
+    </view>
+    <view style="width:100%">
+      <shop-cate more="{{everydayMsg}}" dataList="{{everyday}}" image="{{everydayImage}}"></shop-cate>
+    </view>
+    <view style="width:100%">
+      <shop-cate more="{{tvMsg}}" dataList="{{tv}}" image="{{tvImage}}"></shop-cate>
+    </view>
+</view>

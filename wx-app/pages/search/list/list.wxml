@@ -1,0 +1,16 @@
+<!--pages/search/list/list.wxml-->
+<view class="container">
+  <view style='width:100%'>
+    <search-bar value="{{value}}"></search-bar>
+  </view>
+  <view class="list-box" wx:for="{{search}}" bindtap="skip" wx:key='{{item.id}}' data-value='{{item.id}}'>
+    <view class="list-image">
+      <image src="{{'https://www.liwenjie12.tk/'+item.pic}}"></image>
+    </view>
+    <view class="list-content">
+      <text class="list-title">{{item.title}}</text>
+      <text class="list-description">{{item.description}}</text>
+      <text class="list-price">￥{{item.newprice}}</text>
+    </view>
+  </view>
+</view>

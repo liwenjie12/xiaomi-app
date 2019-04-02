@@ -1,0 +1,126 @@
+/* pages/cart/cart.wxss */
+.border{
+  box-sizing: border-box;
+}
+checkbox .wx-checkbox-input{
+  width:40rpx;
+  height:40rpx;
+  border-radius:50%;
+}
+.cart-box{
+  width:100%;
+  background-color:rgb(242,242,242);
+  margin-bottom:100rpx;
+}
+.cart-box::after{
+  content: "";
+  display: block;
+  clear:both;
+}
+.cart-item{
+  display:block;
+  background: #fff;
+  height:240rpx;
+  width:100%;
+  margin-bottom:20rpx;
+}
+.cart-item-content{
+  width:100%;
+  height:180rpx;
+}
+.cart-item-content>view{
+  float:left;
+}
+.cart-item-shop{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-left:20rpx;
+  font-size: 28rpx;
+  border-bottom: 2rpx solid rgba(0, 0, 0, 0.2);
+}
+.cart-item-one{
+  text-align: center;
+  line-height: 180rpx;
+  width:15%;
+}
+.cart-item-two{
+  padding:10rpx 0;
+  width:25%;
+  height:180rpx;
+}
+.cart-item-three{
+  width:30%;
+  height:180rpx;
+  position:relative;
+}
+.cart-item-three>view,.cart-item-four>view{
+  position:absolute;
+  top:50%;
+  transform: translateY(-50%);
+}
+.item-title{
+  display:inline-block;
+  width:100%;
+  font-size: 28rpx;
+}
+.item-content{
+  display:inline-block;
+  width:100%;
+  font-size: 24rpx;
+  color:rgba(0, 0, 0, 0.5);
+}
+.text-overflow{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow:hidden;
+}
+button[size=mini]{
+  line-height: 40rpx;
+  padding:10rpx 10rpx;
+  width:60rpx;
+  height:60rpx;
+}
+.item-content-number{
+  box-sizing: border-box;
+  display: inline-block;
+  line-height: 40rpx;
+  font-size: 13px;
+  padding:10rpx 20rpx;
+  vertical-align: top;
+  border:1rpx solid #ddd; 
+  border-radius:5px;
+  height:60rpx;
+  text-align: center;
+}
+.cart-item-four{
+  width:25%;
+  height:180rpx;
+  position:relative;
+  text-align: right;
+}
+.item-four-delect{
+  width:100%;
+}
+.item-four-delect image{
+  width:32rpx;
+  height:32rpx;
+}
+.cart-item-two image{
+  width:160rpx;
+  height:160rpx;
+}
+.cart-pay{
+  width:100%;
+  position: fixed;
+  bottom:0;
+  box-shadow:0 0 3px rgba(0, 0, 0, 0.5);
+}
+.cart-pay>view{
+  float:left;
+  width:33.33333%;
+  height:100rpx;
+  font-size:32rpx;
+  text-align: center;
+  line-height: 100rpx;
+}

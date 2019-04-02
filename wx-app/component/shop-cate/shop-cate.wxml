@@ -1,0 +1,21 @@
+<!--component/shop-cate/shop-cate.wxml-->
+<view class="shop-cate border">
+  <wxs src="./shop-cate.wxs" module="filter"></wxs>
+  <view>
+    <image src="{{image}}" class="shop-cate-img"></image>
+  </view>
+  <view class="shop-cate-box">
+    <view class="shop-cate-list border" wx:for="{{dataList}}" bindtap="skip" data-id="{{item.id}}" wx:key="{{item.id}}">
+      <view>
+        <image src="{{'https://www.liwenjie12.tk/'+item.pic}}" class="cate-list-img"></image>
+      </view>
+      <text class="text-block border">{{filter.filter(item.title)}}</text>
+      <text class="text-block cate-list-content border">{{filter.delect(item.content)}}</text>
+      <text class="text-block">
+        <text class="price-color">{{filter.filter(item.newprice)}}</text>
+        <text class="cate-list-content content-delect">{{item.oldprice}}</text>
+      </text>
+    </view>
+  </view>
+  <view class="text-block shop-cate-more border">{{more}}</view>
+</view>

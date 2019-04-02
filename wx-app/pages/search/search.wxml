@@ -1,0 +1,17 @@
+<!--pages/search/search.wxml-->
+<view class="container">
+  <view style="width:100%">
+    <search-bar></search-bar>
+  </view>
+  <view class="search-hot border">
+    <text>热门搜索</text>
+  </view>
+  <view class="search-ad">
+    <image src="/images/search-ad.jpg"></image>
+  </view>
+  <view class="search-hot-word border">
+    <block wx:for="{{hot}}" wx:key="{{item}}">
+      <view bindtap="input" data-value="{{item}}">{{item}}</view>
+    </block>
+  </view>
+</view>

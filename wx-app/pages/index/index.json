@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "shop-cate":"/component/shop-cate/shop-cate"
+  }
+}

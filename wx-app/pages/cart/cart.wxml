@@ -1,0 +1,44 @@
+<!--pages/cart/cart.wxml-->
+<view class="container">
+<wxs src="../../component/shop-cate/shop-cate.wxs" module="wxs" />
+  <checkbox-group class="cart-box border" bindchange="compute">
+    <label class="cart-item border" wx:for="{{cart}}" wx:key="{{index}}">
+      <view class='cart-item-shop'>小米官方</view>
+      <view class="cart-item-content">
+        <view class="cart-item-one border">
+          <checkbox value="{{wxs.number(item.price)*item.num}}" checked='{{checked}}' data-price="{{wxs.number(item.price)*item.num}}"></checkbox>
+        </view>
+        <view class="cart-item-two border">
+          <image src="{{'https://www.liwenjie12.tk/'+item.pic}}" class="border"></image>
+        </view>
+        <view class="cart-item-three border">
+          <view style="width:100%">
+            <text class="item-title text-overflow">{{item.title}}</text>
+            <view class="item-content">
+              <button size="mini" bindtap="minus" data-index="{{index}}">-</button>
+              <text class="item-content-number">{{item.num}}</text>
+              <button size="mini" bindtap="plus" data-index="{{index}}">+</button>
+            </view>
+          </view>
+        </view>
+        <view class="cart-item-four border" style="float:right">
+          <view style="width:100%;padding-right:20rpx;" class="border">
+            <text class="item-title text-overflow">￥{{wxs.number(item.price)+"元"}}</text>
+            <view class="item-four-delect">
+              <image src="/images/delect.png" catchtap='delect' data-index="{{index}}"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </label>
+  </checkbox-group>
+  <view class="cart-pay">
+    <view style="background-color:#f4f4f4">
+      <checkbox value="全选" bindtap='check'>全选</checkbox>
+    </view>
+    <view  style="background-color:#fdfdfd">
+      <text>总计:<text style="color:#ff6700">{{price}}</text>元</text>
+    </view>
+    <view style="background-color:#ff6700;color:#fff">去结算</view>
+  </view>
+</view>

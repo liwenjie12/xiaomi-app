@@ -1,0 +1,26 @@
+function filter(e){
+  if(e.indexOf("&")!=-1){
+    return e.substring(0,e.indexOf("&"));
+  }
+  else{
+    return e;
+  }
+}
+function delect(e){
+  if(e.indexOf("&")!=-1){
+    var reg=getRegExp("&nbsp","g");
+    return e.replace(reg," ");
+  }
+  else{
+    return e;
+  }
+}
+function number(e){
+  var a=parseInt(delect(e));
+  return a;
+}
+module.exports={
+  filter:filter,
+  delect:delect,
+  number:number
+}

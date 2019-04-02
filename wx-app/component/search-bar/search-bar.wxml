@@ -1,0 +1,13 @@
+<!--component/search-bar/search-bar.wxml-->
+<view class="border search-box">
+    <view class="search-back left border">
+      <image src="/images/back.png" class="border"></image>
+    </view>
+    <view class="search-input left relative border">
+      <view class="search-hide absolute border"></view>
+      <input type='text' placeholder='搜索商品名称' class="border" adjust-position="false" bindinput='input' value="{{value}}"/>
+    </view>
+    <view class="search-icon left border" bindtap="search">
+      <image src="/images/search.png" class="border"></image>
+    </view>
+  </view>

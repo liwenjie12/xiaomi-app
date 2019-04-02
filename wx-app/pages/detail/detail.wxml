@@ -1,0 +1,63 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+  <wxs src="../../component/shop-cate/shop-cate.wxs" module="wxs" />
+  <swiper indicator-dots="true" indicator-color="#aaa" indicator-active-color="#fff" circular="true">
+    <swiper-item>
+      <image src="/images/xiaomi1.webp.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/xiaomi2.webp.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/xiaomi3.webp.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/xiaomi4.webp.jpg"></image>
+    </swiper-item>
+  </swiper>
+  <view class="detail-content">
+    <text class="text-block content-title">{{wxs.delect(list.title)}}</text>
+    <text class="text-block content-info">{{wxs.delect(list.description)}}</text>
+    <text class="text-block content-price">￥{{wxs.delect(list.newprice)}}</text>
+  </view>
+  <view class="section selection-box border">
+    <view class="selection-container">
+      <picker bindchange="pickerChange" value="{{index}}" range="{{list.list}}">
+        <view class="picker">
+          <view class="float min-width">已选</view>
+          <view class="float max-width">{{wxs.delect(list.list[index])}}</view>
+          <view style="float:right;text-align:right" class="min-width">></view>
+        </view>
+      </picker>
+      <view class="section">
+        <picker
+          mode="region"
+          bindchange="location"
+          value="{{region}}"
+        >
+          <view class="picker">
+          <view class="float min-width">送至</view>
+          <view class="float max-width">{{region[0]}} {{region[1]}} {{region[2]}}</view>
+          <view style="float:right;text-align:right" class="min-width">></view>
+        </view>
+        </picker>
+    </view>
+    </view>
+  </view>
+  <view class="cart border">
+    <view class="cart-box border" bindtap='skip'>
+      <image src="/images/cart.png" class="cart-icon border"></image>
+      <text class="cart-title">购物车</text>
+      <text class="cart-number">{{number}}</text>
+    </view>
+    <view class="cart-button border" bindtap='cart'>加入购物车</view>
+  </view>
+  <view class="detail-information">
+    <view class="information-title">商品详情</view>
+    <image src="/images/detail1.webp.jpg" mode="widthFix"></image>
+    <image src="/images/detail2.webp.jpg" mode="widthFix"></image>
+    <image src="/images/detail3.webp.jpg" mode="widthFix"></image>
+    <image src="/images/detail4.webp.jpg" mode="widthFix"></image>
+    <view class="information-title">到底啦</view>
+  </view>
+</view>

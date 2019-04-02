@@ -1,0 +1,20 @@
+/**app.wxss**/
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
+.border{
+  box-sizing: border-box;
+}
+.relative{
+  position: relative;
+}
+.absolute{
+  position: absolute;
+}
+.fixed{
+  position:fixed;
+}

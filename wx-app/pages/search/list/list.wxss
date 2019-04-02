@@ -1,0 +1,47 @@
+/* pages/search/list/list.wxss */
+view,image,text{
+  box-sizing: border-box;
+}
+.list-box{
+  width:100%;
+  height:240rpx;
+  padding:20rpx;
+  border-bottom:2rpx solid rgba(0,0,0,0.2);
+}
+.list-box::after{
+  content:"";
+  display: block;
+  clear: both;
+}
+.list-image{
+  width:30%;
+  height:200rpx;
+  float:left;
+}
+.list-image image{
+  width:100%;
+  height:200rpx;
+}
+.list-content{
+  width:70%;
+  float: left;
+  padding-left:40rpx;
+}
+.list-content text{
+  display: inline-block;
+}
+.list-title{
+  font-size:36rpx;
+}
+.list-description{
+  font-size:28rpx;
+  line-height: 28rpx;
+  color:rgba(0,0,0,0.5);
+  width:100%;
+  height:56rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.list-price{
+  color:#ff6700;
+}
