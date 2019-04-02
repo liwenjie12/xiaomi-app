@@ -1,0 +1,2 @@
+# xiaomi-app
+wx app
